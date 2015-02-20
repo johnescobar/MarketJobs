@@ -1,0 +1,84 @@
+.menucss{
+	font-size: 10px;
+	height: 26px;
+	margin-top: 69px;
+}
+
+.menucss ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menucss a:focus {
+	background-color:#999999;
+}
+
+
+
+/*Top level list items*/
+.menucss ul li{
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+/*Top level menu link items style*/
+.menucss ul li a{
+	display: block;
+	padding: 5px 10px 4px 10px;
+	margin-right: 0px; /*espacio en cada bloque*/
+	border-bottom-width: 0;
+	color: #666;
+	text-decoration: none;
+}
+
+.menucss ul li a:hover{
+	background: url(../images/menuhover.gif) bottom repeat-x;
+	color:#FFFFFF;
+ /*background:#999999;Fondo de cada bloque cuando pasa el mouse*/
+}
+	
+/*1st sub level menu*/
+.menucss ul li ul{
+	position: absolute;
+	left: 0;
+	display: block;
+	visibility: hidden;
+	z-index: 100;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.menucss ul li ul li{
+	display: list-item;
+	float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.menucss ul li ul li ul{
+	top: 0;
+}
+
+/* estilo del sub nivel */
+.menucss ul li ul li a{
+	font-size: 11px;
+	width: 160px; /*width of sub menus*/
+	background-image:url(../images/submenu.gif);
+	background-repeat:repeat-x;
+	
+	color: #666;
+	padding: 4px 5px;
+	margin: 0;
+	border-top-width: 0;
+	border-bottom: 1px solid #DDD;
+}
+
+
+/*sub menus hover style*/
+.menucss ul li ul li a:hover{ 
+	background:#F8A454;
+	color: #FFF;
+	background-image:url(../images/menuhover.gif);
+	background-repeat:repeat-x;
+
+}
