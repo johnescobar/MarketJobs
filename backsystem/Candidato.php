@@ -147,7 +147,7 @@ SIMNotify::each();
 
 
 <tr>
-			<td  class="columnafija" > IDNacionalidad </td><td>
+			<td  class="columnafija" > Nacionalidad </td><td>
 			<div class="a-select">
 				<?php echo SIMHTML::formPopUp( "Pais" , "Nombre" , "Nombre" , "IDNacionalidad" , $frm["IDPais"] ," 1 " , "[Seleccione Nacionalidad]" , "popup mandatory" , "title = \"país\"" )?>
 			</div>
