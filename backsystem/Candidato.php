@@ -147,16 +147,34 @@ SIMNotify::each();
 
 
 <tr>
-			<td  class="columnafija" > IDNacionalidad </td><td><input id=IDNacionalidad type=text size=25  name=IDNacionalidad class="input mandatory " title="IDNacionalidad" value="<?=$frm[IDNacionalidad] ?>"> </td>
+			<td  class="columnafija" > IDNacionalidad </td><td>
+			<div class="a-select">
+				<?php echo SIMHTML::formPopUp( "Pais" , "Nombre" , "Nombre" , "IDNacionalidad" , $frm["IDPais"] ," 1 " , "[Seleccione Nacionalidad]" , "popup mandatory" , "title = \"país\"" )?>
+			</div>
+			</td>
 			</tr>
 			<tr>
-			<td  class="columnafija" > IDPais </td><td><input id=IDPais type=text size=25  name=IDPais class="input mandatory " title="IDPais" value="<?=$frm[IDPais] ?>"> </td>
+				<td  class="columnafija" > País </td><td>
+					<div class="a-select">
+						<?php echo SIMHTML::formPopUp( "Pais" , "Nombre" , "Nombre" , "IDPais" , $frm["IDPais"] ," 1 " , "[Seleccione el Pais]" , "popup mandatory" , "title = \"país\"" )?>
+					</div>
+				</td>
 			</tr>
 			<tr>
-			<td  class="columnafija" > IDDepartamento </td><td><input id=IDDepartamento type=text size=25  name=IDDepartamento class="input mandatory " title="IDDepartamento" value="<?=$frm[IDDepartamento] ?>"> </td>
+				<td  class="columnafija" > Departamento </td><td>
+
+					<div class="a-select">
+						<?php echo SIMHTML::formPopUp( "Departamento" , "Nombre" , "Nombre" , "IDDepartamento" , $frm["IDDepartamento"] ," 1 " , "[Seleccione el Departamento]" , "popup mandatory" , "title = \"departamento\"" )?>
+					</div>
+				</td>
 			</tr>
 			<tr>
-			<td  class="columnafija" > IDCiudad </td><td><input id=IDCiudad type=text size=25  name=IDCiudad class="input mandatory " title="IDCiudad" value="<?=$frm[IDCiudad] ?>"> </td>
+				<td  class="columnafija" > Ciudad </td><td>
+					<div class="a-select">
+						<?php echo SIMHTML::formPopUp( "Ciudad" , "Nombre" , "Nombre" , "IDCiudad" , $frm["IDCiudad"] ," 1 " , "[Seleccione la Ciudad]" , "popup mandatory" , "title = \"ciudad\"" )?>
+					</div>
+
+				</td>
 			</tr>
 			<tr>
 			<td  class="columnafija" > Viaje </td><td><? echo SIMHTML::formradiogroup( array_flip( SIMResources::$sino ) , $frm["Viaje"] , 'Viaje' , "class=' mandatory'" ) ?></td>
